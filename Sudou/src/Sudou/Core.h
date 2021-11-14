@@ -7,5 +7,5 @@
 		#define SUDOU_API __declspec(dllimport)
 	#endif // SUDOU_BUILD_DLL
 #else
-	#error Sudou only supports Windows!
+	#define SUDOU_API
 #endif // HZ_PLATFORM_WINDOWS
