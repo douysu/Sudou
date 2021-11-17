@@ -1,4 +1,3 @@
-mkdir build
-cd build
-cmake ..
-make
+mkdir -p Engine/Intermediate/
+cd Engine/Intermediate
+cmake ../../

@@ -1,9 +1,9 @@
 # Directions
 .vs/
 
-bin/
+Engine/Binaries
 
-bin-int/
+Engine/Intermediate
 
 # Files
 *.user
