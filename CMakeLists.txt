@@ -23,6 +23,8 @@ set(LIBRARY_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM
 file(GLOB SOURCE_RUNTIME
     "Engine/Source/Runtime/*.cpp"
     "Engine/Source/Runtime/*.h"
+    "Engine/Source/Runtime/Events/*.h"
+    "Engine/Source/Runtime/Events/*.cpp"
 )
 
 file(GLOB SOURCE_EDITOR
