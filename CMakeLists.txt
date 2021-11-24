@@ -2,7 +2,12 @@ cmake_minimum_required (VERSION 3.1)
 set (CMAKE_C_STANDARD 11)
 set (CMAKE_CXX_STANDARD 11)
 project (Sudou)
-include_directories("${PROJECT_SOURCE_DIR}/Engine/Source")
+
+include_directories(
+    "${PROJECT_SOURCE_DIR}/Engine/Source"
+    "${PROJECT_SOURCE_DIR}/Engine/Source/ThirdParty"
+    "${PROJECT_SOURCE_DIR}/Engine/Source/ThirdParty/spdlog/include"
+)
 
 if (WIN32)
     add_definitions(-DSUDOU_PLATFORM_WINDOWS)
