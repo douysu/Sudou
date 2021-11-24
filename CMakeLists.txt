@@ -5,7 +5,7 @@ project (Sudou)
 include_directories("${PROJECT_SOURCE_DIR}/Engine/Source")
 
 if (WIN32)
-    message(STATUS "Is windows")
+    add_definitions(-DSUDOU_PLATFORM_WINDOWS)
 elseif (UNIX AND NOT APPLE)
     message(STATUS "Is Unix")
 elseif (APPLE)
@@ -15,4 +15,19 @@ endif (WIN32)
 set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
 set(LIBRARY_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
 
-add_subdirectory(Engine/Source)
+file(GLOB SOURCE_RUNTIME
+    "Engine/Source/Runtime/*.cpp"
+    "Engine/Source/Runtime/*.h"
+)
+
+file(GLOB SOURCE_EDITOR
+    "Engine/Source/Editor/*.cpp"
+    "Engine/Source/Editor/*.h"
+)
+
+add_library(Engine SHARED  ${SOURCE_RUNTIME})
+target_compile_definitions(Engine PRIVATE -DSUDOU_BUILD_DLL)
+
+add_executable(Editor ${SOURCE_EDITOR})
+
+target_link_libraries(Editor Engine)
