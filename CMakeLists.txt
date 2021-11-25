@@ -23,6 +23,9 @@ set(LIBRARY_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM
 file(GLOB SOURCE_RUNTIME
     "Engine/Source/Runtime/*.cpp"
     "Engine/Source/Runtime/*.h"
+)
+
+file(GLOB SOURCE_RUNTIME_EVENTS
     "Engine/Source/Runtime/Events/*.h"
     "Engine/Source/Runtime/Events/*.cpp"
 )
@@ -32,7 +35,10 @@ file(GLOB SOURCE_EDITOR
     "Engine/Source/Editor/*.h"
 )
 
-add_library(Engine SHARED  ${SOURCE_RUNTIME})
+source_group("Source\\Runtime" FILES ${SOURCE_RUNTIME})
+source_group("Source\\Runtime\\Events" FILES ${SOURCE_RUNTIME_EVENTS})
+
+add_library(Engine SHARED  ${SOURCE_RUNTIME} ${SOURCE_RUNTIME_EVENTS})
 target_compile_definitions(Engine PRIVATE -DSUDOU_BUILD_DLL)
 
 add_executable(Editor ${SOURCE_EDITOR})
