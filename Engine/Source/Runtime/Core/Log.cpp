@@ -1,4 +1,5 @@
 #include "Log.h"
+#include "Runtime/stdafx.h"
 
 #include "spdlog/sinks/stdout_color_sinks.h"
 

@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "Runtime/stdafx.h"
 #include "Log.h"
 
 extern Sudou::Application* Sudou::CreateApplication();

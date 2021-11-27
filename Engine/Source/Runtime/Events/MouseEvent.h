@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-#include <sstream>
+#include "Runtime/stdafx.h"
 
 namespace Sudou {
 

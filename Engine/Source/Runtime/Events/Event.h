@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Runtime/Core.h"
+#include "Runtime/Core/Core.h"
 
-#include <string>
-#include <functional>
+#include "Runtime/stdafx.h"
 
 namespace Sudou {
 

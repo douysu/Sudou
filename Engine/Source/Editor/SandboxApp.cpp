@@ -1,5 +1,5 @@
-#include "Runtime/Application.h"
-#include "Runtime/EntryPoint.h"
+#include "Runtime/Core/Application.h"
+#include "Runtime/Core/EntryPoint.h"
 
 class Sandbox : public Sudou::Application
 {

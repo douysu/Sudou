@@ -1,6 +1,7 @@
 #include "Application.h"
+#include "Runtime/stdafx.h"
 #include "Runtime/Events/ApplicationEvent.h"
-#include "Runtime/Log.h"
+#include "Runtime/Core/Log.h"
 
 namespace Sudou
 {

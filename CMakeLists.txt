@@ -25,6 +25,11 @@ file(GLOB SOURCE_RUNTIME
     "Engine/Source/Runtime/*.h"
 )
 
+file(GLOB SOURCE_RUNTIME_CORE
+    "Engine/Source/Runtime/Core/*.cpp"
+    "Engine/Source/Runtime/Core/*.h"
+)
+
 file(GLOB SOURCE_RUNTIME_EVENTS
     "Engine/Source/Runtime/Events/*.h"
     "Engine/Source/Runtime/Events/*.cpp"
@@ -36,10 +41,12 @@ file(GLOB SOURCE_EDITOR
 )
 
 source_group("Source\\Runtime" FILES ${SOURCE_RUNTIME})
+source_group("Source\\Runtime\\Core" FILES ${SOURCE_RUNTIME_CORE})
 source_group("Source\\Runtime\\Events" FILES ${SOURCE_RUNTIME_EVENTS})
 
-add_library(Engine SHARED  ${SOURCE_RUNTIME} ${SOURCE_RUNTIME_EVENTS})
+add_library(Engine SHARED ${SOURCE_RUNTIME} ${SOURCE_RUNTIME_CORE} ${SOURCE_RUNTIME_EVENTS})
 target_compile_definitions(Engine PRIVATE -DSUDOU_BUILD_DLL)
+target_precompile_headers(Engine PRIVATE "Engine/Source/Runtime/stdafx.h")
 
 add_executable(Editor ${SOURCE_EDITOR})
 
