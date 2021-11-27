@@ -1,4 +1,6 @@
 #include "Application.h"
+#include "Runtime/Events/ApplicationEvent.h"
+#include "Runtime/Log.h"
 
 namespace Sudou
 {
@@ -14,6 +16,16 @@ namespace Sudou
 
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		if (e.IsInCategory(EventCategoryApplication))
+		{
+			SD_TRACE("EventCategoryApplication");
+		}
+		if (e.IsInCategory(EventCategoryInput))
+		{
+			SD_TRACE("EventCategoryInput");
+		}
+
 		while (true);
 	}
 }
