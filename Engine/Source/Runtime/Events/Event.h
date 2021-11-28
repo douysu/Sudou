@@ -2,7 +2,7 @@
 
 #include "Runtime/Core/Core.h"
 
-#include "Runtime/stdafx.h"
+#include "Runtime/Core/stdafx.h"
 
 namespace Sudou {
 

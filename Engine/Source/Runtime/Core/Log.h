@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Runtime/stdafx.h"
+#include "Runtime/Core/stdafx.h"
 #include "Core.h"
 #include "spdlog/spdlog.h"
 

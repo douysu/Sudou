@@ -1,0 +1,8 @@
+function(assign_source_group)
+    foreach(SOURCE IN ITEMS ${ARGN})
+    get_filename_component(SOURCE_PATH "${SOURCE}" PATH)
+    file(RELATIVE_PATH SOURCE_PATH_REL "${SRC_ROOT_PATH}" "${SOURCE_PATH}")
+    string(REPLACE "/" "\\" GROUP_PATH "${SOURCE_PATH_REL}")
+    source_group("${GROUP_PATH}" FILES "${SOURCE}")
+endforeach()
+endfunction(assign_source_group)

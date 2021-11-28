@@ -1,6 +1,6 @@
 #pragma once
-#include "Runtime/stdafx.h"
-#include "Log.h"
+#include "Runtime/Core/stdafx.h"
+#include "Runtime/Core/Log.h"
 
 extern Sudou::Application* Sudou::CreateApplication();
 
