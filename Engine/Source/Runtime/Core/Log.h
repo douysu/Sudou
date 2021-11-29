@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Runtime/Core/stdafx.h"
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Sudou {
 	class SUDOU_API Log
