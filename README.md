@@ -1,19 +1,10 @@
 # Sudou引擎
-
-从零开始3D引擎系列
+<p align="center">
+  <img src = "Resource/Sudou_Logo.png">
+</p>
 
 # Getting Start
 
 使用脚本进行构建
 
 ## Windows
-
-```
-./build.bat
-```
-
-## Linux
-
-```
-./build.sh
-```
