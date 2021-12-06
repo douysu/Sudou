@@ -3,7 +3,7 @@
 #include "Runtime/Events/ApplicationEvent.h"
 #include "Runtime/Core/Log.h"
 
-#include <GLFW/glfw3.h>
+#include "glad/glad.h"
 
 namespace Sudou
 {

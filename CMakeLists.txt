@@ -32,8 +32,13 @@ file(GLOB SOURCE_EDITOR
 
 # Platform
 if (WIN32)
+    # Add lib
     set(LIBS glfw3 opengl32)
-    add_definitions(-DSUDOU_PLATFORM_WINDOWS)
+    add_library(GLAD "${SRC_ROOT_PATH}/ThirdParty/glad/glad.c")
+    set(LIBS ${LIBS} GLAD)
+    # Add macro
+    add_definitions(-DSUDOU_PLATFORM_WINDOWS -DGLFW_INCLUDE_NONE)
+    # Create filters
     include(${CMAKE_SOURCE_DIR}/cmake/windows.cmake)
     assign_source_group(${SOURCE_LIST})
 elseif (UNIX AND NOT APPLE)
