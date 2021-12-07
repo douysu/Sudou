@@ -1,5 +1,6 @@
 #include "Runtime/Core/Application.h"
 #include "Runtime/Core/EntryPoint.h"
+#include "Runtime/GUI/ImGuiLayer.h"
 
 
 class ExampleLayer : public Sudou::Layer
@@ -24,6 +25,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Sudou::ImGuiLayer());
 	}
 
 	~Sandbox()

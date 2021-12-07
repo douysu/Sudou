@@ -36,6 +36,13 @@ if (WIN32)
     set(LIBS glfw3 opengl32)
     add_library(GLAD "${SRC_ROOT_PATH}/ThirdParty/glad/glad.c")
     set(LIBS ${LIBS} GLAD)
+    include_directories("${SRC_ROOT_PATH}/ThirdParty/imgui")
+    file(GLOB SOURCE_IMGUI
+    "${SRC_ROOT_PATH}/ThirdParty/imgui/*.cpp"
+    "${SRC_ROOT_PATH}/ThirdParty/imgui/*.h"
+    )
+    add_library(ImGui ${SOURCE_IMGUI})
+    set(LIBS ${LIBS} ImGui)
     # Add macro
     add_definitions(-DSUDOU_PLATFORM_WINDOWS -DGLFW_INCLUDE_NONE)
     # Create filters
