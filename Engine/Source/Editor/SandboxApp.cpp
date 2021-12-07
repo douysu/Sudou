@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		SD_INFO("Example::Update");
+		// SD_INFO("Example::Update");
 	}
 
 	void OnEvent(Sudou::Event& event) override
 	{
-		SD_TRACE("{0}", event);
+		// SD_TRACE("{0}", event);
 	}
 };
 
