@@ -2,6 +2,7 @@
 #include "Runtime/Core/stdafx.h"
 #include "Runtime/Events/ApplicationEvent.h"
 #include "Runtime/Core/Log.h"
+#include "Runtime/Core/Input.h"
 
 #include "glad/glad.h"
 
@@ -59,6 +60,11 @@ namespace Sudou
 
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			auto[x, y] = Input::GetMousePosition();
+
+			SD_CORE_TRACE("{0}, {1}", x, y);
+
 			m_Window->OnUpdate();
 		}
 	}
