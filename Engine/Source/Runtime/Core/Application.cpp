@@ -63,7 +63,7 @@ namespace Sudou
 
 			auto[x, y] = Input::GetMousePosition();
 
-			SD_CORE_TRACE("{0}, {1}", x, y);
+			// SD_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
