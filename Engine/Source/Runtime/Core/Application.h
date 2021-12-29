@@ -6,6 +6,7 @@
 #include "Runtime/Events/ApplicationEvent.h"
 #include "Runtime/Core/Layer.h"
 #include "Runtime/Core/LayerStack.h"
+#include "Runtime/GUI/ImGuiLayer.h"
 
 namespace Sudou
 {
@@ -26,6 +27,7 @@ namespace Sudou
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

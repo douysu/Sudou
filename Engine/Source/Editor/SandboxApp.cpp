@@ -4,6 +4,7 @@
 #include "Runtime/Core/Input.h"
 #include "Runtime/Core/KeyCodes.h"
 #include "Runtime/Core/MouseButtonCodes.h"
+#include "imgui/imgui.h"
 
 
 class ExampleLayer : public Sudou::Layer
@@ -29,6 +30,13 @@ public:
 			SD_TRACE("{0}", (char)e.GetKeyCode());
 		}
 	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello Sudou!");
+		ImGui::End();
+	}
 };
 
 class Sandbox : public Sudou::Application
@@ -36,8 +44,7 @@ class Sandbox : public Sudou::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
-		PushOverlay(new Sudou::ImGuiLayer());
+		PushLayer(new ExampleLayer());	
 	}
 
 	~Sandbox()

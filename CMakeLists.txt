@@ -35,7 +35,9 @@ if (WIN32)
     # Add lib
     set(LIBS glfw3 opengl32)
     # Glad
-    add_library(GLAD "${SRC_ROOT_PATH}/ThirdParty/glad/glad.c")
+    add_library(GLAD 
+    "${SRC_ROOT_PATH}/ThirdParty/glad/glad.c"
+    )
     set(LIBS ${LIBS} GLAD)
     # Imgui
     include_directories("${SRC_ROOT_PATH}/ThirdParty/imgui")
@@ -61,7 +63,7 @@ elseif (APPLE)
 endif (WIN32)
 
 # Generate Engine
-add_library(Engine SHARED ${SOURCE_LIST})
+add_library(Engine ${SOURCE_LIST})
 target_link_libraries(Engine ${LIBS})
 target_compile_definitions(Engine PRIVATE -DSUDOU_BUILD_DLL)
 target_precompile_headers(Engine PRIVATE "${SRC_ROOT_PATH}/Runtime/Core/stdafx.h")
