@@ -54,7 +54,7 @@ if (WIN32)
     # Add macro
     add_definitions(-DSUDOU_PLATFORM_WINDOWS -DGLFW_INCLUDE_NONE)
     # Create filters
-    include(${CMAKE_SOURCE_DIR}/cmake/windows.cmake)
+    include(${CMAKE_SOURCE_DIR}/Cmake/Windows.cmake)
     assign_source_group(${SOURCE_LIST})
 elseif (UNIX AND NOT APPLE)
     message(STATUS "Is Unix")
