@@ -18,6 +18,7 @@ include_directories("${SRC_ROOT_PATH}")
 include_directories("${THIRD_PARTY}")
 include_directories("${THIRD_PARTY}/spdlog/include")
 include_directories("${THIRD_PARTY}/glad/include")
+include_directories("${THIRD_PARTY}/imgui")
 
 # File
 file(
