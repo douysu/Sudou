@@ -20,6 +20,8 @@ include_directories("${THIRD_PARTY}/imgui")
 
 include(${CMAKE_SOURCE_DIR}/Cmake/ThirdParty.cmake)
 
+add_definitions(-DSUDOU_PLATFORM_WINDOWS -DGLFW_INCLUDE_NONE)
+
 add_library(Engine ${SOURCE_LIST})
 target_link_libraries(Engine ${LIBS})
 target_compile_definitions(Engine PRIVATE -DSUDOU_BUILD_DLL)
