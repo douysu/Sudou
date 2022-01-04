@@ -1,5 +1,7 @@
 #pragma once
 
+#include "config.h"
+
 #ifdef SUDOU_PLATFORM_WINDOWS
 	#ifdef SUDOU_BUILD_DLL
 		#define	SUDOU_API __declspec(dllexport)

@@ -6,7 +6,6 @@ if (WIN32)
     add_subdirectory("${THIRD_PARTY}/imgui")
     set(BUILD_STATIC_LIBS 1)
     add_subdirectory("${THIRD_PARTY}/glm")
-
     set(LIBS opengl32 GLAD ImGui glm_static spdlog ${glfw_library})
     include(${CMAKE_SOURCE_DIR}/Cmake/ConfigIDEDirectory.cmake)
 elseif (UNIX AND NOT APPLE)

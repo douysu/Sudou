@@ -8,6 +8,8 @@ Engine/Libs
 
 Engine/Intermediate
 
+config.h
+
 # Files
 *.user
 

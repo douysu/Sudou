@@ -6,21 +6,24 @@ set (CMAKE_C_STANDARD 17)
 set (CMAKE_CXX_STANDARD 17)
 project (Sudou)
 
-set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
-set(LIBRARY_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Libs/${CMAKE_VS_PLATFORM_NAME})
+set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
+set(LIBRARY_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/Engine/Libs/${CMAKE_VS_PLATFORM_NAME})
 
-set(SRC_ROOT_PATH "${CMAKE_SOURCE_DIR}/Engine/Source")
+set(SRC_ROOT_PATH "${PROJECT_SOURCE_DIR}/Engine/Source")
 set(THIRD_PARTY "${SRC_ROOT_PATH}/ThirdParty")
 
+include_directories("${PROJECT_SOURCE_DIR}/")
 include_directories("${SRC_ROOT_PATH}")
 include_directories("${THIRD_PARTY}")
 include_directories("${THIRD_PARTY}/spdlog/include")
 include_directories("${THIRD_PARTY}/glad/include")
 include_directories("${THIRD_PARTY}/imgui")
 
-include(${CMAKE_SOURCE_DIR}/Cmake/ThirdParty.cmake)
+include(${PROJECT_SOURCE_DIR}/Cmake/ThirdParty.cmake)
 
-add_definitions(-DSUDOU_PLATFORM_WINDOWS -DGLFW_INCLUDE_NONE)
+set(SUDOU_PLATFORM_WINDOWS 1)
+set(GLFW_INCLUDE_NON 1)
+configure_file(${PROJECT_SOURCE_DIR}/config.h.in ${PROJECT_SOURCE_DIR}/config.h)
 
 add_library(Engine ${SOURCE_LIST})
 target_link_libraries(Engine ${LIBS})
