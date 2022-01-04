@@ -1,0 +1,2 @@
+# Glad
+add_library(GLAD  "glad/glad.c")

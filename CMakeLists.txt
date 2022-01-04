@@ -1,3 +1,6 @@
+#
+# Copyright(c) 2021 Yin Dou.
+#
 cmake_minimum_required (VERSION 3.1)
 set (CMAKE_C_STANDARD 17)
 set (CMAKE_CXX_STANDARD 17)
@@ -6,9 +9,6 @@ project (Sudou)
 # Set output dir
 set(EXECUTABLE_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
 set(LIBRARY_OUTPUT_PATH  ${CMAKE_SOURCE_DIR}/Engine/Binaries/${CMAKE_VS_PLATFORM_NAME})
-
-# Link lib
-link_directories(${CMAKE_SOURCE_DIR}/Engine/Libs)
 
 set(SRC_ROOT_PATH "${CMAKE_SOURCE_DIR}/Engine/Source")
 set(THIRD_PARTY "${SRC_ROOT_PATH}/ThirdParty")
