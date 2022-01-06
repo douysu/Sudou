@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Runtime/Core/Window.h"
+#include "Runtime/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -28,6 +29,7 @@ namespace Sudou {
 		virtual void Shutdown();
 
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
