@@ -1,2 +1,2 @@
 #cmakedefine SUDOU_PLATFORM_WINDOWS
-#cmakedefine GLFW_INCLUDE_NON
+#cmakedefine GLFW_INCLUDE_NONE

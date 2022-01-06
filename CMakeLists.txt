@@ -21,8 +21,10 @@ include_directories("${THIRD_PARTY}/imgui")
 
 include(${PROJECT_SOURCE_DIR}/Cmake/ThirdParty.cmake)
 
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+
 set(SUDOU_PLATFORM_WINDOWS 1)
-set(GLFW_INCLUDE_NON 1)
+set(GLFW_INCLUDE_NONE 1)
 configure_file(${PROJECT_SOURCE_DIR}/config.h.in ${PROJECT_SOURCE_DIR}/config.h)
 
 add_library(Engine ${SOURCE_LIST})

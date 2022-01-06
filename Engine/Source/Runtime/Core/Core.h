@@ -3,6 +3,7 @@
 #include "config.h"
 
 #ifdef SUDOU_PLATFORM_WINDOWS
+#ifdef SD_DYNAMIC_LINK
 	#ifdef SUDOU_BUILD_DLL
 		#define	SUDOU_API __declspec(dllexport)
 	#else
@@ -10,6 +11,9 @@
 	#endif // SUDOU_BUILD_DLL
 #else
 	#define SUDOU_API
+#endif
+#else
+	#error Sudou only support windows
 #endif // SD_PLATFORM_WINDOWS
 
 #ifdef _DEBUG
