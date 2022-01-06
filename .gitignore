@@ -10,6 +10,8 @@ Engine/Intermediate
 
 config.h
 
+imgui.ini
+
 # Files
 *.user
 
