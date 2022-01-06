@@ -7,6 +7,7 @@
 #include "Runtime/Core/Layer.h"
 #include "Runtime/Core/LayerStack.h"
 #include "Runtime/GUI/ImGuiLayer.h"
+#include "Runtime/Renderer/Shader.h"
 
 namespace Sudou
 {
@@ -32,6 +33,7 @@ namespace Sudou
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	private:
 		static Application* s_Instance;
 	};
