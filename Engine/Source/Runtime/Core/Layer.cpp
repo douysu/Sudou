@@ -7,10 +7,4 @@ namespace Sudou {
 		: m_DebugName(debugName)
 	{
 	}
-
-	Layer::~Layer()
-	{
-
-	}
-
 }

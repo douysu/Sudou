@@ -17,7 +17,7 @@ namespace Sudou
 	{
 	public:
 		Application();
-		~Application();
+		~Application() = default;
 		void Run();
 
 		void OnEvent(Event& e);
